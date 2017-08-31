@@ -68,7 +68,6 @@
 				}	
 			}
 			flag = 0;
-			store.set("judge",{all:true});
 		}else if (flag == 2) { //completed btn
 			todo_list.html(null); 
 			for (var i = 0; i < task_list_ctn.length; i++) { //创建task
@@ -78,7 +77,6 @@
 				}	
 			}
 			flag = 0;
-			store.set("judge",{all:true});
 		}
 
 		deleteTask(); //match to delete Li
@@ -227,8 +225,7 @@
 		target.off();
 		target.on('click', function(event) {
 			event.preventDefault();
-			var btnIndex = $(this).index();
-			toAll(target); //全选工具
+			var btnIndex = $(this).index(); //获取
 			btnSelected(btnIndex); //边框工具
 			createHtml();
 		});
@@ -295,7 +292,6 @@
 	######################   ╠  TOOLS  ╣   ######################	
 							 ║		   ║
 	######################   ╚════╩════╝   ######################	
-	
 	#######################	 ↓↓↓↓↓↓↓↓↓↓↓  #######################
 	########################  ↓↓↓↓↓↓↓↓↓  ########################
 	#########################  ↓↓↓↓↓↓↓  #########################
